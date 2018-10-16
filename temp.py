@@ -5,4 +5,5 @@ Fl_Usr = open("Usr.txt", "r") #User File
 F.FileRead(Fl_Usr, G.L_User)
 print(G.L_User)
 neel = "neel"
-print(U.UserAuth([str(neel), 'Meel']))
+print(U.UserAuth(['thomas', 'Thomas']))
+print(U.UserAuth(['thomas', 'Thomas']))
