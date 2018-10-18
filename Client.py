@@ -4,8 +4,8 @@ import menu as m #menu module
 
 serverName = gethostname()
 serverPort = 5000
-cSocket = socket(AF_INET, SOCK_STREAM)
-cSocket.connect((serverName,serverPort))
+cSocket = socket(AF_INET6, SOCK_STREAM)
+cSocket.connect((serverName, serverPort))
 print("Connected to " + serverName + " at " + gethostbyname(serverName))
 while True:
     cSocket.send("HI".encode("utf-8"))
@@ -18,6 +18,7 @@ while True:
         Pswd = input("Enter password").encode("utf-8")
         cSocket.send(Pswd)
         U_ack = cSocket.recv(1024).decode("utf-8")
+        print(U_ack)
         if U_ack == "Success":
             option = m.menu()
             cSocket.send(str(option).encode("utf-8"))

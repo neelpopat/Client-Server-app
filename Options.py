@@ -1,4 +1,4 @@
-"""Option file"""
+
 #options are combined and kept here.
 #code is done by Thomas, Ravjot, Augustine
 #Merged by Neel

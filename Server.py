@@ -26,9 +26,9 @@ class Server(Thread):
             print(U_Nm)#recieve username
             self.client.send(Ack.encode("utf-8"))
             Pswd = self.client.recv(1024).decode("utf-8")
-            print(Pswd)#recieve password
+            #print(Pswd)#recieve password
             Tst = [str(U_Nm), str(Pswd)]
-            while Log_count <3:
+            while Log_count < 3:
                 if U.UserAuth(Tst) == True:
                     self.client.send("Success".encode("utf-8"))
                     opt = int(self.client.recv(1024).decode("utf-8")) #recieve Option
@@ -119,10 +119,9 @@ def main():
     serName = gethostname()
     serPort = 5000
 
-    serSock = socket(AF_INET,SOCK_STREAM)
+    serSock = socket(AF_INET6,SOCK_STREAM)
     serSock.bind((serName, serPort))
     serSock.listen()
-
 
     print("HI from server \n\n")
     print(serName + "  "+ str(serPort))
