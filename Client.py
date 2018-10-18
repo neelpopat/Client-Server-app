@@ -25,6 +25,7 @@ def OP_F():
     Minute = input("Enter minutes ")
     cSocket.send(Minute.encode("utf-8"))
     OP = cSocket.recv(1024).decode("utf-8")
+    print(op)
     if OP == "Exist":
         print("Data Already Exist\n Try Again")
         OP_F()
@@ -37,6 +38,7 @@ def OP_FI():
     Org_nme = input("Enter Organisation name ")
     cSocket.send(Org_nme.encode("utf-8"))
     OP = cSocket.recv(1024).decode("utf-8")
+    print(op)
     if OP == "NotExist":
         print("Data Don't Exist\n Try Again")
         OP_FI()
