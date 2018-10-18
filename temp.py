@@ -7,3 +7,5 @@ print(G.L_User)
 neel = "neel"
 print(U.UserAuth(['thomas', 'Thomas']))
 print(U.UserAuth(['thomas', 'Thomas']))
+print(G.L_User)
+print(G.L_Used)
