@@ -1,13 +1,15 @@
 """Option file"""
 #options are combined and kept here.
-improt Global as G
-def option1(name):
+#code is done by Thomas, Ravjot, Augustine
+#Merged by Neel
+import Global as G
+def Option1(name):
     for element in G.L_Org:
         if name in element:
             Tmp_string = "Name : " + element[0] + "Domain : " + element[1] + "Ip address : " + element[2] + "Minutes : " + element[3]
             return Tmp_string
 
-def option2():
+def Option2():
     Tmp = []
     for element in G.L_Org:
         Tmp.append(int(element[3]))
@@ -15,14 +17,18 @@ def option2():
     minimum = minimum(Tmp)
     maximum = maximum(Tmp)
     mean = mean(Tmp)
+    Tmp_string = "Min value : " + str(minimum) + "Max value : " + str(maximum) + "Mean value : " + str(mean)
+    return Tmp_string
 
-def option3(ch):
+def Option3(ch):
+    Tmp_list = []
     if ch == 1:
-        sorted(G.L_Org, key=lambda x: x[0])
-    else if ch == 2:
-        sorted(G.L_Org, key=lambda x: x[3], reverse = True)
+        Tmp_list = sorted(G.L_Org, key=lambda x: x[0])
+    elif ch == 2:
+        Tmp_list = sorted(G.L_Org, key=lambda x: x[3], reverse = True)
+    return Tmp_list
 
-def option4(list):
+def Option4(list):
     if list not in G.L_Org:
         file = open("Org.txt", "a")
         for x in list:
@@ -34,7 +40,7 @@ def option4(list):
         G.L_Org.append(list)
         return "Success"
     
-def option5(name):
+def Option5(name):
     for element in G.L_Org:
         if name in element:
             G.L_Org.remove(element)
@@ -45,7 +51,8 @@ def option5(name):
                     if x != el[3]:
                         file.wirte("\t")
                 file.write("\n")
-            file.close
+            file.close()
+            return "Success"
         
 def minimum(list):
     mn = list[0]
