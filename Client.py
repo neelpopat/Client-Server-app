@@ -83,7 +83,9 @@ while True:
                 
                 elif option == 6:
                     print("\n Disconnecting......")
+                    print(cSocket.recv(1024).decode("utf-8"))
                     cSocket.close()
+                    break
                 
         elif U_ack == "Failure":
             print("wrong Id password")

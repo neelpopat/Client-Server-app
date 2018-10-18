@@ -6,7 +6,7 @@ import Global as G
 def Option1(name):
     for element in G.L_Org:
         if name == element[0]:
-            Tmp_string = "Name : " + str(element[0]) + "Domain : " + str(element[1]) + "Ip address : " + str(element[2]) + "Minutes : " + str(element[3])
+            Tmp_string = "Name : " + str(element[0]) + " Domain : " + str(element[1]) + " Ip address : " + str(element[2]) + " Minutes : " + str(element[3])
             return Tmp_string
 
 def Option2():
@@ -17,7 +17,7 @@ def Option2():
     minim = minimum(Tmp)
     maxim = maximum(Tmp)
     avg = mean(Tmp)
-    Tmp_string = "Min value : " + str(minim) + "Max value : " + str(maxim) + "Mean value : " + str(avg) +"\n"
+    Tmp_string = "Min value : " + str(minim) + " Max value : " + str(maxim) + " Mean value : " + str(avg) +"\n"
     return Tmp_string
 
 def Option3(ch):

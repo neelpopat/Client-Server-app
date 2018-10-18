@@ -66,6 +66,9 @@ class Server(Thread):
                                     else :
                                         self.client.send("Error".encode("utf-8"))
                                         self.client.close()
+                                        G.L_User.append(G.L_Used)
+                                        G.L_Used = []
+                                        break
                                     
                                 elif opt == 5:
                                     op_cnt = 0
@@ -83,6 +86,7 @@ class Server(Thread):
                                         self.client.close()
                                         G.L_User.append(G.L_Used)
                                         G.L_Used = []
+                                        break
                             
                          
                             else:
@@ -91,12 +95,12 @@ class Server(Thread):
                                     self.client.close()
                                     G.L_User.append(G.L_Used)
                                     G.L_Used = []
-    # write reamining code here
-                            break
+                                    break
                     else :
                         self.client.send("Failure".encode("utf-8"))
-                        print("attempt 1")
                         Log_count = Log_count + 1
+                        print("attempt : ", Log_count)
+                        break
                 else:
                     self.client.send("Exceeded".encode("utf-8"))
                     print("disconnecting...")
