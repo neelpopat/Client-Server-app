@@ -8,5 +8,10 @@ First Option, display the domain name and IP address that is being belonged to t
 The main purpose of this project is to make a work easier for the higher companies so that, it will be easier for them to collect the huge amount of data, domain names and ip addresses with respect to the time. In the project, there are 6 menu options from where there is distribution of tasks which has to be performed by the users. There is also removing and addition of organization from the file. With the storing and updating of data to the list, it will be great assistance for the multinational companies.  
 
 This application is for localhost(Both client and server run on the same machine).
-Run Server.py
-Then Run Client.py
+
+
+STEPS :- 
+
+    Run Server.py
+
+    Then Run Client.py
