@@ -1,3 +1,4 @@
+#Testing file for connection and user authentication.
 import Global as G #global variables
 import FileRead as F
 import UserAuth as U
