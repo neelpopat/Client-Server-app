@@ -1,3 +1,5 @@
+#Clients file
+#Owner :- Neel
 from socket import *
 
 import menu as m #menu module
