@@ -1,7 +1,7 @@
 
 #options are combined and kept here.
-#code is done by Thomas, Ravjot, Augustine
-#Merged by Neel
+
+#Owner :- Neel
 import Global as G
 def Option1(name):
     for element in G.L_Org:
